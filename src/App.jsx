@@ -3,52 +3,78 @@ import { MyButton } from './components/MyButton';
 import { ListItems } from './components/ListItems';
 import { Counter } from './components/Counter';
 import { useState } from 'react';
+import { JogoVelha } from './components/JogoVelha';
+
+
+
+
+{
+  /*  const [count, setCount] = useState(0)
+   <MyButton />
+
+  <Box
+    sx={{
+      display: 'flex',
+      flexWrap: 'wrap',
+      justifyContent: 'center'
+    }}>
+    <Typography
+      variant={'h3'}
+    >
+      Diego Ferreira
+    </Typography>
+    <Box
+      component={'img'}
+      src={'https://github.com/diegoferreirapinto.png'}
+      width={240}
+      height={240}
+      sx={{
+        border: '1px solid',
+        borderRadius: '50%'
+      }}
+    />
+
+  </Box>
+
+  <ListItems />
+  
+  <Counter count={count} onClick={setCount} />
+  <Counter count={count} onClick={setCount} /> */
+}
 
 
 function App() {
-  
-  const [count, setCount] = useState(0)
-  
+
+
+
   return (
     <Container
+      maxWidth={false}
       sx={{
+        display: `absolute`,
+        position: `fixed`,
+        top: '0',
+        left: '0',
+        flexWrap: 'wrap',
         border: '1px solid',
-        height: '98vh',
-        width: '95vw',
+        height: '100vh',
+        textAlign: `center`,
+
+
       }}>
-      Bem-Vindo ao meu aplicativo!
-      <MyButton />
-
-      <Box
+      <Typography
+        variant={`h6`}
+        width={`100%`}
         sx={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          justifyContent: 'center'
-        }}>
-        <Typography
-          variant={'h3'}
-        >
-          Diego Ferreira
-        </Typography>
-        <Box
-          component={'img'}
-          src={'https://github.com/diegoferreirapinto.png'}
-          width={240}
-          height={240}
-          sx={{
-            border: '1px solid',
-            borderRadius: '50%'
-          }}
-        />
+          border: '2px solid yellow',
+        }}
+      >
+        Bem-Vindo ao meu aplicativo!
+      </Typography>
 
-      </Box>
+      <JogoVelha />
 
-      <ListItems />
-      
-      <Counter count={count} onClick={setCount} />
-      <Counter count={count} onClick={setCount} />
-
-    </Container>
+    </Container >
   )
 }
 
